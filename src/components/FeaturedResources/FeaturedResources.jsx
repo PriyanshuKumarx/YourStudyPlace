@@ -7,29 +7,28 @@ const FeaturedResources = ({id}) => {
       id: 1,
       title: "DBMS Notes",
       description: "Comprehensive notes on Database Management Systems.",
-      image: "src/assets/images/DBMS subject without humans.png"
+      image: "src/assets/images/introduction-of-dbms.webp"
 ,
     },
     {
       id: 2,
       title: "Computer Networks",
       description: "Detailed notes on Computer Networks.",
-      image: "src/assets/images/computer networks.png",
+      image: "src/assets/images/data-analysis-isometric-infographics-layout_1284-25277.avif",
     },
     {
       id: 3,
       title: "Data Structures",
       description: "Learn about various data structures and algorithms.",
-      image: "src/assets/images/data structure without human.png",
+      image: "src/assets/images/Coverimag.webp",
     },
     {
       id: 4,
       title: "Operating Systems",
       description: "Understand the core concepts of Operating Systems.",
-      image: "src/assets/images/operating system without humans.png",
+      image: "src/assets/images/1708845254160.png",
     },
   ];
-
 
   return (
     <section className="featured-resources" id={id}>
