@@ -1,0 +1,300 @@
+:root {
+  --dropdown-bg-color: rgba(60, 100, 89, 0.98);
+  --dropdown-hover-bg-color: rgba(45, 74, 66, 0.98);
+  --dropdown-text-color: #ffffff;
+  --dropdown-hover-text-color: #f0f0f0;
+  --animation-duration: 0.3s;
+  --dropdown-width: 250px;
+  --dropdown-nested-width: 280px;
+  --dropdown-item-padding: 1.5rem;
+  --dropdown-font-size: 1rem;
+  --dropdown-spacing: 10px;
+  --dropdown-radius: 12px;
+  --dropdown-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --dropdown-transition: all var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  --dropdown-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.dropdown-button {
+  background-color: var(--dropdown-bg-color);
+  backdrop-filter: blur(8px);
+  color: var(--dropdown-text-color);
+  padding: 1rem 2.5rem;
+  border: var(--dropdown-border);
+  border-radius: var(--dropdown-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: var(--dropdown-transition);
+  box-shadow: var(--dropdown-shadow);
+}
+
+.dropdown-button:hover {
+  background-color: var(--dropdown-hover-bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-link.active {
+  z-index: 2;
+}
+
+
+.caret {
+  transition: transform var(--animation-duration) ease;
+  margin-left: auto;
+}
+
+.caret.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--dropdown-bg-color);
+  backdrop-filter: blur(12px);
+  min-width: var(--dropdown-width);
+  border-radius: var(--dropdown-radius);
+  box-shadow: var(--dropdown-shadow);
+  border: var(--dropdown-border);
+  z-index: 1000;
+  padding: 12px 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: var(--dropdown-transition);
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.dropdown-link {
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown-toggle {
+  cursor: default; /* Parent items get default cursor */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--dropdown-item-padding);
+  color: var(--dropdown-text-color);
+  background: transparent;
+  border: none;
+  font-size: var(--dropdown-font-size);
+  width: 100%;
+  text-align: left;
+  transition: var(--dropdown-transition);
+  margin: 4px 0;
+  position: relative;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--dropdown-hover-bg-color);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sub-caret {
+  transition: transform var(--animation-duration) ease;
+  margin-left: 12px;
+}
+
+.sub-caret.open {
+  transform: rotate(90deg);
+}
+
+.dropdown-nested {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 0;
+  background: var(--dropdown-bg-color);
+  backdrop-filter: blur(12px);
+  min-width: var(--dropdown-nested-width);
+  border-radius: var(--dropdown-radius);
+  box-shadow: var(--dropdown-shadow);
+  border: var(--dropdown-border);
+  z-index: 1001;
+  opacity: 0;
+  transform: translateX(-8px);
+  visibility: hidden;
+  transition: var(--dropdown-transition);
+  pointer-events: none;
+  padding: 8px 0;
+}
+
+.dropdown-nested.open {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: all;
+}
+
+.dropdown-link button {
+  transition: transform 0.3s ease, padding 0.2s ease;
+  position: relative;
+}
+
+.dropdown-link button:hover {
+  transform: translateX(8px);
+  padding-left: 1.2rem;
+}
+
+.dropdown-link button:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.nested-item {
+  cursor: pointer; /* Add this line */
+  padding: 0.75rem var(--dropdown-item-padding);
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--dropdown-text-color);
+  font-size: var(--dropdown-font-size);
+  transition: var(--dropdown-transition);
+}
+
+.nested-item:hover {
+  background-color: var(--dropdown-hover-bg-color);
+  color: var(--dropdown-hover-text-color);
+}
+
+.nested-item:hover,
+.dropdown-link button:hover {
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    width: 100%;
+    min-width: unset;
+    position: static;
+    transform: none;
+    margin-top: 8px;
+  }
+
+  .dropdown-nested {
+    position: static;
+    box-shadow: none;
+    border: none;
+    margin-left: 1rem;
+    transform: none;
+    padding: 0;
+  }
+
+  .dropdown-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-link button:hover {
+    transform: none;
+    padding-left: var(--dropdown-item-padding);
+  }
+
+  .dropdown-link button:hover::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --dropdown-item-padding: 0.75rem;
+    --dropdown-font-size: 0.9rem;
+    --dropdown-width: 100%;
+    --dropdown-nested-width: 100%;
+  }
+
+  .dropdown-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+.pdf-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pdf-error {
+  color: #dc3545;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pdf-page {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Add these styles to your existing CSS */
+.pdf-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.pdf-error-container h3 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.pdf-error-container ul {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #0d8bf2;
+}

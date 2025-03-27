@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Rules</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <div class="upper">
+        <div class="text-container">
+            <h1>FAQ & Rules</h1>
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="scrollToSection('faq-section')">
+                <i class="fas fa-question-circle"></i>
+                FAQ
+            </button>
+            <button class="button" onclick="scrollToSection('rules-section')">
+                <i class="fas fa-scroll"></i>
+                Rules
+            </button>
+        </div>
+    </div>
+
+    <div class="lower">
+        <div id="faq-section" class="faq-content">
+            <div class="faq-bar">
+                <button class="faq-button active" onclick="openFAQ(1)">General</button>
+                <button class="faq-button" onclick="openFAQ(2)">Study Together</button>
+                <button class="faq-button" onclick="openFAQ(3)">Discord Server</button>
+            </div>
+
+            <div class="faq-sections">
+                <div id="faq1" class="faq-section active">
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>01</span>
+                            <h3>What resources can I access on this website?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>On our website, you can access a wide variety of academic resources, including previous year question papers, study PDFs, and other educational materials across various subjects and courses. Additionally, we provide updates on the latest trends and innovations in science and technology.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>02</span>
+                            <h3>Are the study materials free to download?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>All the resources, including question papers and study PDFs, are completely free for students to study, but you cannot download the documents directly.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>03</span>
+                            <h3>How often are new question papers and study materials updated?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Our website is updated regularly, typically after every major exam session. New question papers, PDFs, and other resources are uploaded as soon as they are made available to us, ensuring that students have access to the most current study materials.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>04</span>
+                            <h3>Can I contribute to the website by uploading my own study materials?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes! If you have valuable academic resources, you can contribute to the website by submitting study PDFs, notes, or even past exam papers. However, please ensure that the materials you upload are accurate, helpful, and do not violate any copyright laws. Currently, we are working on enabling this feature.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>05</span>
+                            <h3>How can I stay updated with new resources and trends?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>By creating an account on our website, you will find the section for updated new resources. Visit that section to know about the latest technology.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 - Study Together -->
+                <div id="faq2" class="faq-section">
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>01</span>
+                            <h3>How do I create an account on the website?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>To create an account, click on the "Sign Up" button located at the top of the homepage. You will need to provide your name, email address, and a password. Once you’ve completed the form, click "Submit," and you'll receive a confirmation email. Follow the instructions in the email to verify your account.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>02</span>
+                            <h3>How do I search for the resources I need?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>After logging in, use the search bar at the top of the page to find study materials by course name, subject, or keyword. You can also filter the results based on the type of resource, such as "Question Papers," "Study PDFs," etc.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>03</span>
+                            <h3>Are the papers and PDFs peer-reviewed?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>The documents available on our website vary in nature. Some papers are peer-reviewed academic papers, while others are university-provided resources or research documents. We strive to provide credible sources.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>04</span>
+                            <h3>How can I contribute study materials to the website?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>While the feature is under development, we plan to allow students to contribute by uploading past exam papers, study PDFs, and notes. Please check back soon for more information on how to contribute resources.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>05</span>
+                            <h3>Can I reset my password if I forget it?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>If you forget your password, simply click the "Forgot Password" link on the login page. Enter your registered email address, and you will receive instructions to reset your password.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 - Discord Server -->
+                <div id="faq3" class="faq-section">
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>01</span>
+                            <h3>Is my personal information safe on the website?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes, we prioritize your privacy and data security. All personal information you provide, such as email and password, is stored securely with encryption. We do not share your data with third parties without your consent.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>02</span>
+                            <h3>Can I use the website on my mobile phone?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes, our website is fully responsive and optimized for mobile use. You can access all resources and features from your mobile device with ease.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>03</span>
+                            <h3>What should I do if I encounter an issue with my account or resources?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>If you experience any issues, such as problems logging in, difficulties accessing resources, or any technical issues, please reach out to our support team via the "Help Center" or the "Contact Us" page. Our team will assist you in resolving the issue.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>04</span>
+                            <h3>Can I track my submitted feedback or suggestions?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Currently, we do not offer a feature to track feedback submissions, but rest assured that all suggestions are reviewed by our team. If your suggestion is implemented or requires further follow-up, you will be notified via email.</p>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-header" onclick="toggleAnswer(this)">
+                            <span>05</span>
+                            <h3>Can I request a demo or guide to understand how to use the website effectively?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Yes, we offer a detailed user guide and tutorials on how to make the most out of our website. You can access these resources in the "Help Center" section. If needed, our support team can also provide personalized assistance through email or chat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Rules Section -->
+    <div id="rules-section" class="rules-content">
+        <h1>RULES</h1>
+        <div class="rule">
+        <h3><i class="fas fa-book-open"></i> Educational Purpose Only</h3>
+        <p>This website is strictly for reading and accessing study materials. It should not be used for any other activities.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-comment-slash"></i> No Chatting or Interaction</h3>
+        <p>There is no feature for chatting or direct interaction. Any attempt to bypass this rule may result in access restrictions.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-university"></i> Respect the Study Environment</h3>
+        <p>Maintain a focused and distraction-free learning atmosphere. Avoid disruptive behavior.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-book-reader"></i> Use Study Materials Responsibly</h3>
+        <p>The content provided is for learning purposes only. Do not misuse, alter, or distribute it inappropriately.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-quote-right"></i> Cite Sources When Necessary</h3>
+        <p>If you use information from study materials elsewhere, ensure proper citation and credit.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-external-link-alt"></i> No External Promotions</h3>
+        <p>Do not promote external websites, courses, or services that are not affiliated with this platform.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-flag"></i> Report Incorrect or Outdated Information</h3>
+        <p>If you find errors in the study materials, use the appropriate reporting feature (if available) to notify the website administrators.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-user-shield"></i> Moderation and Reporting</h3>
+        <p>Be aware that moderators monitor the website to maintain a safe, positive, and constructive environment. If you come across inappropriate content or behavior, report it to the site moderators immediately. Your report will be handled with confidentiality.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-lock"></i> No Hacking or Unauthorized Access</h3>
+        <p>Any attempt to exploit, modify, or gain unauthorized access to the website’s content is strictly prohibited.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-meh"></i> No Offensive or Inappropriate Content</h3>
+        <p>Any offensive language, images, or inappropriate study materials are not allowed.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-info-circle"></i> No Misleading Information</h3>
+        <p>Ensure that all shared or referenced content is accurate and does not spread misinformation.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-graduation-cap"></i> Follow Academic Integrity</h3>
+        <p>Do not use study materials in ways that violate your school’s or institution’s academic integrity policies (e.g., plagiarism)</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-balance-scale"></i> Use the Website Legally</h3>
+        <p>Ensure that your use of this website complies with local laws and educational guidelines.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-clipboard-list"></i> Respect Website Policies</h3>
+        <p>Follow all terms of use, privacy policies, and guidelines outlined by the website administrators.</p>
+    </div>
+    
+    <div class="rule">
+        <h3><i class="fas fa-exclamation-triangle"></i> Report Violations</h3>
+        <p>If you notice any violations of these rules, report them to the website administrators.</p>
+    </div>
+
+    <div class="rule">
+        <h3><i class="fas fa-gavel"></i> Consequences of Rule Violations</h3>
+        <p>Failure to follow these rules may result in temporary or permanent restrictions from using the website.</p>
+    </div>
+    
+    </div>
+
+    <script src="faq.js"></script>
+</body>
+</html>
